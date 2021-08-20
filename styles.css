@@ -136,9 +136,13 @@ header{
 	justify-content: space-between;
 	align-items: center;
 	color: #fff;
-	padding: 15px 90px;
-	background-color: black;
+	padding: 20px 90px;
+	background-color: transparent;
+	transition: background-color 0.5s ease-in;
+}
 
+.header-scroll {
+	background-color: black;
 }
 
 header h2{
@@ -1305,6 +1309,61 @@ outline-width: 15px;
 	text-shadow: 2px 2px black;
 }
 
+.projects-grid .upper-left,
+.projects-grid .upper-right,
+.projects-grid .projects-middle .middle,
+.projects-grid .lower-left,
+.projects-grid .lower-right {
+	position: relative;
+	pointer-events:none;
+}  
+.project img{
+	pointer-events:all;
+}
+.project {
+	background-image: linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,0));
+}
+.project h2 {
+	line-height:1em;
+}
+.projects-grid .projects-row-1 .project-1-text,
+.projects-grid .projects-row-1 .project-2-text,
+.projects-grid .projects-row-2 .project-3-text,
+.projects-grid .projects-row-3 .project-4-text,
+.projects-grid .projects-row-3 .project-5-text{
+	margin-top: 0em;
+	margin-left: 0em;
+	padding-top: 1em;
+	padding-left: 1em;
+	padding-bottom: .5em;
+	width:100%;
+}
+@media (max-width: 1000px){
+	.projects-grid .projects-row-1 .project-1-text,
+	.projects-grid .projects-row-1 .project-2-text,
+	.projects-grid .projects-row-2 .project-3-text,
+	.projects-grid .projects-row-3 .project-4-text,
+	.projects-grid .projects-row-3 .project-5-text{
+		margin-top: 1em;
+		margin-left: 0em;
+		padding-top: 0em;
+		padding-left: 0em;
+		padding-bottom: .5em;
+		width:100%;
+	}
+}
+
+.projects-grid .view-project-button{
+	pointer-events:all;
+}
+.projects-grid .projects-row-1 .upper-right img,
+.projects-grid .projects-row-1 .upper-left img,
+.projects-grid .projects-row-2 .middle img,
+.projects-grid .projects-row-3 .lower-left img,
+.projects-grid .projects-row-3 .lower-right img {
+	pointer-events:all;
+}
+
 
 @media (max-width: 1000px){
 	.our-work {
@@ -2251,7 +2310,12 @@ Team section
 
 .documents-title-text {
 	margin-left: 23em;
-	margin-top: -6em;
+	margin-top: -7em;
+}
+
+.documents-title-text p {
+	font-family: 'Gotham';
+	font-weight: 300;
 }
 
 .documents-section {
@@ -2303,6 +2367,8 @@ Team section
   .collapsible li {
 	  float: left;
 	  padding-right: 3em;
+	  font-family: 'din-2014';
+	  font-size: 1.4em;
   }
   
   .collapsible:hover {
@@ -2326,9 +2392,10 @@ Team section
   }
 
   .content p {
-	  padding: 2em;
-	  width: 80%;
-
+	padding: 2em;
+	width: 80%;
+	font-family: 'Gotham';
+	font-weight: 300;
   }
 
   .bold-field {
@@ -2342,10 +2409,12 @@ Team section
 	margin-left: 2em;
 	margin-top: -3em;
 	text-transform: uppercase;
+	font-family: 'din-2014';
 }
 
 .documents-icon {
 	margin-right: -95%;
+	margin-top: 1%;
 	-webkit-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
@@ -2363,13 +2432,11 @@ Team section
 .second-bar {
 	transform: translateY(8px) rotate(-90deg);
 	margin-top: -1.1em;
-
 }
 
 .documents-icon.active {
 	transform: rotate(135deg);
 }
-
 
 @media (max-width: 950px){
 	.documents-title-text {
