@@ -137,6 +137,12 @@ header{
 	align-items: center;
 	color: #fff;
 	padding: 20px 90px;
+	background-color: black;
+	/* background-color: transparent; */
+	/* transition: background-color 0.5s ease-in; */
+}
+
+.desktop {
 	background-color: transparent;
 	transition: background-color 0.5s ease-in;
 }
@@ -559,7 +565,7 @@ header nav a:hover {
 	}
 }
 
-@media (max-width: 500px){
+@media (max-width: 800px){
 	.title-container h2 {
 		font-size: 35px;
 	}
@@ -1449,7 +1455,7 @@ outline-width: 15px;
 	}
 }
 
-@media (max-width: 700px){
+@media (max-width: 800px){
 	.projects-title h2 {
 		font-size: 40px;
 	}
@@ -1470,13 +1476,13 @@ outline-width: 15px;
 	}
 }
 
-@media (max-width: 600px){
+@media (max-width: 800px){
 	.project-1-name, .project-2-name, .project-3-name, .project-4-name, .project-5-name {
 		font-size: 40px;
 	}
 }
 
-@media (max-width: 600px){
+@media (max-width: 800px){
 	.project-1-type, .project-2-type, .project-3-type, .project-4-type, .project-5-type {
 		font-size: 25px;
 	}
@@ -1764,7 +1770,7 @@ Single Project section
 	}
 }
 
-@media (max-width: 600px){
+@media (max-width: 800px){
 	.single-project-title-section {
 		padding-right: 1em;
 		padding-left: 1em;
@@ -2246,7 +2252,7 @@ Team section
   }
 
 
-  @media (max-width: 600px){
+  @media (max-width: 800px){
 	.team-title h2 {
 		font-size: 40px;
 	}

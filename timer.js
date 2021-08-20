@@ -84,6 +84,11 @@ function toggleTeamModal(e){
     // }
 }
 
+function darkenHeaderOnScroll() {
+    var header = document.querySelector('.desktop');
+    header.classList.add('header-scroll');
+}
+
 function getTimeRemaining(endtime){
     const total = Date.parse(endtime) - Date.parse(new Date());
     const seconds = Math.floor((total / 1000) % 60);
@@ -91,7 +96,7 @@ function getTimeRemaining(endtime){
     const hours = Math.floor((total / (1000*60*60)) % 24);
     const days = Math.floor(total / (1000*60*60*24));
 
-    // console.log(days);
+    console.log(days);
 
     return {
         total,
@@ -112,10 +117,12 @@ function initializeClock(id, endtime) {
     
     function updateClock(){
         const t = getTimeRemaining(endtime);
-        daysSpan.innerHTML = ('0' + t.days).slice(-2);
+        daysSpan.innerHTML = t.days;
         hoursSpan.innerHTML =  ('0' + t.hours).slice(-2);
         minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
         secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+        console.log()
 
         if (t.total <= 0) {
           clearInterval(timeinterval);
@@ -129,6 +136,7 @@ function initializeClock(id, endtime) {
 
 
 // console.log(timerDisplay)
-let endDate = 'August 20 2021 23:59:59 GMT+0200';
+// let endDate = 'August 20 2021 23:59:59 GMT+0200';
+let endDate = 'January 5 2022 09:00:00 GMT+0200';
 
 initializeClock('clock', endDate);
