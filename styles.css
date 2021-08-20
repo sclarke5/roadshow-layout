@@ -323,18 +323,26 @@ header nav a:hover {
 	background-color: #000000;
 }
 
+.parent-element-to-video {
+	overflow: hidden;
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+}
+
 #bg-video-home video {
-	display: block;
+	/* display: block; */
 	position: absolute;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	/* min-height: 100vh; */
-	height: 100vh;
+	height: auto;
+	/* height: 100vh; */
 	/* width: 100vw; */
-	/* min-width: 100%; */
+	min-width: 100vw;
 	max-width: none;
 	}
+
 #bg-video video.hidden-xs {
 	display: block;
 }
@@ -425,11 +433,7 @@ header nav a:hover {
 
 .about-event {
 	display: flex;
-	/* flex-direction: row; */
-	padding-top: 5rem;
-	margin-top: 55em;
-	/* padding-bottom: 5rem; */
-	/* width: 70%; */
+	margin-top: 100vh;
 	overflow: hidden;
 	margin-bottom: 10em;
 }
@@ -1406,6 +1410,19 @@ outline-width: 15px;
 		padding-top: 2em;
 	}
 }
+
+@media (max-width: 600px){
+	.project-1-name, .project-2-name, .project-3-name, .project-4-name, .project-5-name {
+		font-size: 40px;
+	}
+}
+
+@media (max-width: 600px){
+	.project-1-type, .project-2-type, .project-3-type, .project-4-type, .project-5-type {
+		font-size: 25px;
+	}
+}
+
 
 /*------------- 
 Single Project section 
