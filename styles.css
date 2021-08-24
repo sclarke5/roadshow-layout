@@ -136,7 +136,8 @@ header{
 	justify-content: space-between;
 	align-items: center;
 	color: #fff;
-	padding: 20px 90px;
+	padding-left: 90px;
+	padding-right: 90px;
 	background-color: black;
 	/* background-color: transparent; */
 	/* transition: background-color 0.5s ease-in; */
@@ -188,12 +189,12 @@ header nav a:hover {
 }
 
 .company-logo {
-	width: 150px;
+	width: 200px;
 }
 
 @media (max-width: 1000px){
 	header{
-		padding: 20px 50px;
+		/* padding: 20px 50px; */
 	}
 }
 
@@ -366,6 +367,10 @@ header nav a:hover {
 	bottom: 15px;
 	width: 100px;
 	height: 200px;
+  }
+
+  .arrow-container-home:hover {
+	  cursor: pointer;
   }
   
   .chevron {
@@ -597,6 +602,9 @@ header nav a:hover {
 	.responsive {
 		display: flex;
 		flex-direction: row;
+		padding: 0;
+		padding-left: 1em;
+		padding-right: 1em;
 	}
 	.navbar {
 		display: flex;
@@ -2399,6 +2407,7 @@ Team section
 	  /* width: 30%; */
 	  padding-top: 2em;
 	  padding-bottom: 2em;
+	  max-width: 50%;
   }
 
   .content p {
@@ -2420,6 +2429,11 @@ Team section
 	margin-top: -3em;
 	text-transform: uppercase;
 	font-family: 'din-2014';
+	transition: background-color 0.5s;
+}
+
+.view-document-button:hover {
+	background-color: #4FC8ED;
 }
 
 .documents-icon {
@@ -2465,12 +2479,13 @@ Team section
 	}
 }
 
-@media (max-width: 600px){
+@media (max-width: 800px){
 	.documents-title h2 {
 		font-size: 40px;
 	}
 	.documents-section {
 		padding: 80px 30px;
+		padding-bottom: 3em;
 		padding-top: 11rem;
 	}
 	.documents-list-section {
@@ -2482,11 +2497,37 @@ Team section
 		flex-direction: column;
 		/* padding-bottom: 3em; */
 	}
-	.collapsible .documents-icon {
+	/* .collapsible .documents-icon {
 		margin-top: -2em;
 		padding-bottom: 2em;
+	} */
+	.collapsible:hover {
+		background-color: black;
+	  }
+	.content {
+		height: fit-content;
+		display: flex;
+		flex-direction: column;
+	}
+	.content p {
+		padding: 1em;
+		padding-top: 0;
+	}
+	.content img {
+		/* max-width: 100%; */
+		display: none;
+	}
+	.documents-icon {
+		display: none;
+	}
+	.view-document-button {
+		margin-bottom: 2em;
+		margin-left: 1em;
+		margin-top: -2em;
 	}
 }
+
+
 
 
 /*-------------

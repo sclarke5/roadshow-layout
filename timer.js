@@ -6,6 +6,18 @@ function openNav(){
     navMenu.classList.toggle("active");
 }
 
+function arrowScroll(){
+    var firstSection = document.querySelector('.about-event');
+    var y = firstSection.getBoundingClientRect().top + window.scrollY;
+    window.scroll({
+        top: (y - 110),
+        behavior: "smooth"
+    })
+    // location.href = "#";
+    // location.href = ".about-title-top";
+    // firstSection.scrollIntoView();
+}
+
 function toggleDocumentView(e){
     e = e || window.event;
     var target = e.target || e.srcElement;
