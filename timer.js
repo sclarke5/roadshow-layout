@@ -13,9 +13,6 @@ function arrowScroll(){
         top: (y - 110),
         behavior: "smooth"
     })
-    // location.href = "#";
-    // location.href = ".about-title-top";
-    // firstSection.scrollIntoView();
 }
 
 function toggleDocumentView(e){
